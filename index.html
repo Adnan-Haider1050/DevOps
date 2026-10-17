@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Glitch</title>
+    <style>
+        body {
+            background: black;
+            color: lime;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            border: 2px solid lime;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px lime;
+        }
+        button {
+            background: lime;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>SYSTEM BREACH DETECTED</h1>
+        <p id="code">Loading random code...</p>
+        <button onclick="hack()">Click to Hack</button>
+    </div>
+
+    <script>
+        function hack() {
+            document.getElementById("code").innerText = "Access Granted! Welcome Agent " + Math.floor(Math.random() * 1000);
+        }
+    </script>
+</body>
+</html>
